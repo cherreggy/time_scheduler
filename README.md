@@ -1,4 +1,4 @@
-# <font color=#cc3333>⏰ 时间管理</font>大师<br><font size=3 color=grey>携程前端训练营&nbsp;&nbsp;&nbsp;&nbsp;HTML+CSS+JS 练习 </font><font size=3 color=grey>&nbsp;&nbsp;&nbsp;&nbsp;姓名：宣正吉 </font>
+# <font color=#cc3333>⏰ 时间管理</font>大师<br>
 
 ###### 😄 打开 main.html 并全部完成计划（点击所有计划前的对勾并划掉）有惊喜，默认一个样例
 
