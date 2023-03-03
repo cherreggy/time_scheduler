@@ -1,0 +1,216 @@
+/* 整体背景色灰色 */
+body {
+  background-color: #efefef;
+}
+/* 面板，卡片风格，居中的圆角矩形，不设高度，有阴影 */
+.pannel {
+  position: relative;
+  margin: 20px auto;
+  padding: 30px;
+  width: 1200px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color: #fff;
+  /* color: #333; */
+  transition: height 0.5s;
+}
+/* 喝彩表情包 */
+.pannel .cong {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+/* 姓名水印 */
+.pannel .myname {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  font-size: 30px;
+  color: #efefef;
+  opacity: 0;
+  font-weight: 700;
+  transition: opacity 0.5s;
+}
+
+.pannel:hover .myname {
+  opacity: 1;
+}
+/* 标题部分，有文字间隔，居中 ----------------------------*/
+.pannel header h1 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  letter-spacing: 30px;
+}
+/* 标题之前的LOGO，行内块显示类型 */
+.pannel header h1::before {
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  margin-right: 40px;
+  width: 38px;
+  height: 38px;
+  content: "";
+  background-image: url(../main.png);
+  background-size: contain;
+  transition: transform 1s;
+}
+.pannel header h1:hover::before {
+  transform: rotate(360deg);
+}
+/* 日期显示框，显示当前日期，在界面右上角小字标注 */
+.date {
+  /* 日期可以向上挪动一部分，较为美观 */
+  margin-top: -10px;
+  float: right;
+  font-size: 16px;
+}
+/* 输入框部分样式 ----------------------------------------*/
+.pannel main .info {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+.pannel main .info input[type="text"] {
+  padding-left: 15px;
+  margin-left: 10px;
+  margin-right: 20px;
+  height: 40px;
+  width: 950px;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+/* 输入框激活边框加深 */
+.pannel main .info input[type="text"]:focus {
+  border: 2px solid #999;
+}
+/* 字体图标-添加 大小 */
+.pannel main .info .add {
+  display: inline-block;
+  margin-bottom: -4px;
+  width: 26px;
+  height: 26px;
+  background-image: url(../add.png);
+  background-size: contain;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+/* 悬浮添加按钮旋转90°带动画 */
+.pannel main .info .add:hover {
+  transform: rotate(90deg) scale(1.2);
+}
+/* 时间段选择部分 -------------------------------------------*/
+.pannel main .info input[type="time"] {
+  width: 100px;
+  margin-left: 5px;
+  margin-right: 20px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* 标签选择---------------------------------------------- */
+.pannel main .info #tag {
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+/* 计划项列表-------------------------------------------- */
+.pannel main .plans {
+  padding-top: 20px;
+}
+/* 清空按钮 */
+.pannel main .clear {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px;
+  /* border: 2px solid #ccc; */
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+.pannel main .clear:hover {
+  top: 1px;
+  left: 1px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+/* 计划项样式 */
+.pannel main .plans .plan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #ccc;
+  /* background-color: pink; */
+  border-radius: 10px 10px 0 0;
+  transition: all 0.5s;
+}
+/* 悬浮阴影强调 */
+.pannel main .plans .plan-item:hover {
+  border-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pannel main .plans .plan-item p {
+  width: 800px;
+  /* 禁止复制内容 */
+  user-select: none;
+}
+.pannel main .plans .plan-item div {
+  align-items: center;
+}
+/* 两个图标的设置 */
+.pannel main .plans .plan-item .fin {
+  margin-right: 40px;
+}
+.pannel main .plans .plan-item .iconfont {
+  font-size: 25px;
+  cursor: pointer;
+  /* z-index: 1; */
+}
+/* 删除按钮 */
+.pannel main .plans .plan-item .del {
+  position: relative;
+  top: 2px;
+  margin-right: -50px;
+  color: crimson;
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: auto;
+}
+
+.pannel main .plans .plan-item:hover .del {
+  opacity: 1;
+  cursor: pointer;
+}
+/* 计划时间段 */
+.pannel main .plans .plan-item .plan-timeline {
+  margin-top: 10px;
+  font-size: 16px;
+}
+/* 标签样式 */
+.pannel main .plans .plan-item .tag-item {
+  height: 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #ccc;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  user-select: none;
+}

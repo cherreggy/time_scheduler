@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./fonts/iconfont.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+
+    <title>时间管理大师</title>
+  </head>
+  <body>
+    <!-- 主界面面板 -->
+    <div class="pannel">
+      <div class="cong"><img src="./cong.png" alt="" /></div>
+      <!-- 标题和日期显示部分 -->
+      <header>
+        <h1>时间管理大师</h1>
+        <p class="date">日期显示框</p>
+      </header>
+      <!-- 主体部分，输入框和列表 -->
+      <main>
+        <!-- 输入框部分 -->
+        <div class="info">
+          <div>
+            <span style="font-weight: 700; margin-left: 6px">新计划：</span>
+            <input type="text" placeholder="全部计划完成有惊喜哦~" />
+            <i class="add"></i>
+          </div>
+          <div
+            style="font-weight: 700; font-size: 16px; margin: 20px 0 0 100px"
+          >
+            开始时间：<input type="time" id="start" /> 结束时间：<input
+              type="time"
+              id="end"
+            />
+            标签：<select name="tags" id="tag">
+              <option value="学习">学习</option>
+              <option value="工作">工作</option>
+              <option value="娱乐">娱乐</option>
+              <option value="生活">生活</option>
+              <option value="其它">其它</option>
+            </select>
+          </div>
+        </div>
+        <a href="javascript:;" class="clear">清空</a>
+        <!-- 计划列表 -->
+        <ul class="plans">
+          <li class="plan-item">
+            <div style="display: flex">
+              <!-- 点击完成按钮 -->
+              <span class="fin iconfont icon-kongxinduigou"></span>
+              <div>
+                <p>
+                  计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容计划项内容
+                </p>
+                <!-- 计划时间段 -->
+                <div class="plan-timeline">计划时间：3:00 ~ 5:00</div>
+              </div>
+            </div>
+            <div class="tag-item" style="background-color: skyblue">工作</div>
+            <!-- 删除按钮，移入显示 -->
+            <span class="del iconfont icon-icon-cross-empty"></span>
+            <!-- 点击收藏按钮 -->
+            <span class="fav iconfont icon-shoucang"></span>
+          </li>
+        </ul>
+      </main>
+      <span class="myname">姓名：宣正吉</span>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

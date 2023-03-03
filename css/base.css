@@ -1,0 +1,25 @@
+/* 去除所有元素的默认边距 */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 去除列表项圆点*/
+ul li {
+  list-style: none;
+}
+/* 去除链接默认的下划线和颜色 */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* 去除输入框边框 */
+input {
+  outline: none;
+  /* 行内元素居中对齐 */
+  vertical-align: middle;
+}
+/* 图像大小和父元素一样 */
+img {
+  height: 100%;
+  width: 100%;
+}
